@@ -10,7 +10,7 @@ spring:
     suffix: .html
     check-template-location: false
   datasource:
-    url: jdbc:postgresql://autorack.proxy.rlwy.net:50028/railway
+    url: jdbc:postgresql://autorack.proxy.rlwy.net:50028/
     username: postgres
     password: skYsqbYqALgUhbkapEpxUlrcvORQqmqh
   jpa:
