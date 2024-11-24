@@ -1,0 +1,26 @@
+spring:
+  thymeleaf:
+    check-template-location: false
+  sql:
+    init:
+      mode: always
+  application:
+    name: QRGuard
+  mustache:
+    suffix: .html
+    check-template-location: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: Geme2354
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    show-sql: false
+    open-in-view: false
+  jwt:
+    secret: Keys.secretKeyFor(SignatureAlgorithm.HS512)
+    exptime: 2592000000
