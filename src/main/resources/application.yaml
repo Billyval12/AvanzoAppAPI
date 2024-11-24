@@ -10,9 +10,9 @@ spring:
     suffix: .html
     check-template-location: false
   datasource:
-    url: jdbc:postgresql://autorack.proxy.rlwy.net:50028/railway
-    username: postgres
-    password: skYsqbYqALgUhbkapEpxUlrcvORQqmqh
+      url: ${DATABASE_URL}
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
