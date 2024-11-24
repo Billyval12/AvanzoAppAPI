@@ -25,6 +25,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<GeneralResponse> register(@RequestBody @Valid UserRegisterDTO info) {
+        System.out.println("Registering user: " + info.getEmail());
         User existUser = userService.findUserByEmail(info.getEmail());
 
         if (existUser != null) {
