@@ -56,7 +56,12 @@ public class WebSecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.httpBasic(withDefaults()).csrf(AbstractHttpConfigurer::disable);
 
-
+        http.authorizeHttpRequests(auth -> auth
+                .requestMatchers("/api/auth/**")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+        );
 
         http.sessionManagement(managment -> managment.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
